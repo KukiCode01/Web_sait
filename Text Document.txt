@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Школа Лучших Знаний"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Добро пожаловать в школу "Школа Лучших Знаний"</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="students.html">Ученикам</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>О нашей школе</h2>
+            <p>"Школа Лучших Знаний" предоставляет высококачественное образование с уникальной программой, подходящей для каждого ученика. Мы с гордостью объединяем традиции и инновации в нашем обучающем процессе.</p>
+            <p>Мы заботимся о развитии каждого ученика, предоставляя широкий выбор академических и внеурочных программ, способствующих их всестороннему росту и успешному будущему.</p>
+            <img src="school_image.jpg" alt="Изображение школы">
+        </section>
+
+        <section>
+            <h2>История школы</h2>
+            <p>"Школа Лучших Знаний" была основана в [год основания] году [основателем или организацией]. С момента своего основания она стала одним из ведущих учебных заведений в нашем регионе, предоставляя качественное образование и способствуя развитию молодежи.</p>
+            <h3>Ключевые моменты и достижения:</h3>
+            <ul>
+                <li><strong>2000:</strong> Открытие школы и первые классы.</li>
+                <li><strong>2003:</strong> Введение новых образовательных программ.</li>
+                <li><strong>2008:</strong> Начало проведения традиционных мероприятий и спортивных соревнований.</li>
+                <li><strong>2014:</strong> Школа получает [награда/признание] за [достижение].</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Обратная связь</h2>
+            <p>Если вам необходимо обговорить некоторые моменты внизу есть окно для обратной связи!</p>
+            <button onclick="openModal()">Открыть форму обратной связи</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Школа "Лучших Знаний". Все права защищены.</p>
+    </footer>
+
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Форма обратной связи</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше сообщение" required></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- JavaScript для открытия и закрытия модального окна -->
+    <script>
+    // JavaScript для открытия и закрытия модального окна
+    function openModal() {
+        var modal = document.getElementById('myModal');
+        if (modal) {
+            modal.style.display = 'flex';
+        }
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('myModal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+    // Добавляем обработчик события для скрытия модального окна при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        closeModal(); // Закрываем модальное окно при загрузке страницы
+    });
+
+    </script>
+</body>
+</html>
